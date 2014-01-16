@@ -27,10 +27,10 @@ $color5 = imagecolorallocate($img, 0, 0, 255);
 $i=0;
 
 while ($i <= 1680000) {
-	//$x = rand(0,$width);
-	//$y = rand(0,$height);
-	$x = rand(0,500);
-	$y = rand(0,500);
+	$x = rand(0,$width);
+	$y = rand(0,$height);
+	//$x = rand(0,500);
+	//$y = rand(0,500);
 	if (imagecolorat($img, $x, $y) == $color1){
 		//imagesetpixel($img, $x, $y, $color2);
 	}else{
