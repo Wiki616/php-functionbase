@@ -3,6 +3,14 @@ header("Content-type: image/png");
 $width=1200;
 $height=700;
 
+function make_seed()
+{
+  list($usec, $sec) = explode(' ', microtime());
+  return (float) $sec + ((float) $usec * 100000);
+}
+
+srand(make_seed());
+
 //记录开始时间
 $mtime = microtime();
 $mtime = explode(" ",$mtime);
@@ -29,7 +37,7 @@ $color5 = imagecolorallocate($img, 0, 0, 255);//blue
 $i=0;
 
 //随机生成点
-while ($i <= 1680000) {
+while ($i <= 840000) {
 	$x = rand(0,$width);
 	$y = rand(0,$height);
 	if (imagecolorat($img, $x, $y) == $color1){
